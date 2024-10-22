@@ -1,0 +1,35 @@
+Question 1: 
+Statement
+    |
+Assignment
+    |
+Identifier "=" Expression
+A                   |
+                    Term
+                    |
+        Term "*" Factor
+          B         |   
+                (Expression)
+                    |
+                    Term
+                Term "*" Factor
+                C (Expression)
+                    |
+                Expression "+" Term
+                    A       B
+Leftmost derivation:
+1. Statement -> Assignment
+2. Assignment -> A = Expression
+3. Expression -> Term
+4. Term -> Term * Factor -> B * Factor
+5. Factor -> (Expression)
+6. Expression -> Term
+7. Term -> Term * Factor -> C * (Expression)
+8. Expression -> Expression + Term -> A + B
+Which gives A = B * (C * (A+B))
+
+
+Question 2:
+a. 128
+b. 126
+c. 101
